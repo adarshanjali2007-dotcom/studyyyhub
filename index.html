@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js" defer></script>
     <title>StudyHub - Study Materials</title>
   </head>
 
@@ -15,7 +16,7 @@
       </p>
       <button
         id="menu-button"
-        class="absolute right-8 top-5 cursor-pointer text-3xl"
+        class="absolute right-6 top-1 cursor-pointer text-3xl transition-duration-700  hover:border hover:border-slate-500 p-2 text-center"
       >
         ☰
       </button>
@@ -23,12 +24,12 @@
 
     <nav
       id="nav-menu"
-      class="hidden flex flex-col gap-4 px-5 py-4 text-sm font-medium text-slate-300"
+      class="hidden absolute bg-black w-1/2  h-full flex flex-col gap-4 px-5 py-4 text-sm font-medium text-slate-300"
     >
-      <a href="#">Home</a>
-      <a href="#">Subjects</a>
-      <a href="#">Notes</a>
-      <a href="#">Contact</a>
+      <a href="#" class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200">Home</a>
+      <a href="#" class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200">Subjects</a>
+      <a href="#" class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200">Notes</a>
+      <a href="#" class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200">Contact</a>
     </nav>
 
     <!-- Subjects -cards -->
