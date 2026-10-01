@@ -1,81 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>StudyHub - Study Materials</title>
+  </head>
 
-<title>StudyHub - Study Materials</title>
+  <body class="bg-black">
+    <header class="bg-blue-500 text-left p-4 relative">
+      <h1 class="text-3xl font-bold text-white">StudyHub</h1>
+      <p class="mt-1 text-sm text-slate-900">
+        Free Study Materials for Students
+      </p>
+      <button
+        id="menu-button"
+        class="absolute right-8 top-5 cursor-pointer text-3xl"
+      >
+        ☰
+      </button>
+    </header>
 
-</head>
+    <nav
+      id="nav-menu"
+      class="hidden flex flex-col gap-4 px-5 py-4 text-sm font-medium text-slate-300"
+    >
+      <a href="#">Home</a>
+      <a href="#">Subjects</a>
+      <a href="#">Notes</a>
+      <a href="#">Contact</a>
+    </nav>
 
-<body>
+    <!-- Subjects -cards -->
+    <div
+      class="mt-4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-1"
+    >
+      <!-- Mathematics -->
+      <div
+        class="border rounded-2xl border-slate-200 p-6 shadow-sm bg-slate-950"
+      >
+        <h2 class="mb-5 text-xl font-bold text-slate-800">Mathematics</h2>
+        <div class="flex flex-col gap-3">
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Notes</a
+          >
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Important Questions</a
+          >
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Previous Year Papers</a
+          >
+        </div>
+      </div>
 
-<header>
-<h1>StudyHub</h1>
-<p>Free Study Materials for Students</p>
-</header>
+      <!-- Programming in C -->
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Subjects</a>
-<a href="#">Notes</a>
-<a href="#">Contact</a>
-</nav>
+      <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
+        <h2 class="mb-5 text-xl font-bold text-slate-800">Programming in C</h2>
+        <div class="flex flex-col gap-3">
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Notes</a
+          >
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Lab Programs</a
+          >
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Important Question
+          </a>
+        </div>
+      </div>
 
-<div class="container">
+      <!-- Digital Fundmentals -->
 
-<div class="subject">
-<h2>Mathematics</h2>
+      <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
+        <h2 class="mb-5 text-xl font-bold text-slate-800">
+          Digital Fundmentals
+        </h2>
+        <div class="flex flex-col gap-3">
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄Unit Notes</a
+          >
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Short Notes</a
+          >
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Model Questions
+          </a>
+        </div>
+      </div>
 
-<div class="materials">
-<a href="#">📄  Notes</a>
-<a href="#">📄 Important Questions</a>
-<a href="#">📄 Previous Year Papers</a>
-</div>
+      <!-- Computer Fundmentals -->
 
-</div>
+      <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
+        <h2 class="mb-5 text-xl font-bold text-slate-800">
+          Computer Fundmentals
+        </h2>
+        <div class="flex flex-col gap-3">
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >Lecture Notes</a
+          >
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Exam Prepration Notes</a
+          >
+          <a
+            href="#"
+            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+            >📄 Previous Questions
+          </a>
+        </div>
+      </div>
+    </div>
 
-<div class="subject">
-<h2>Programming in C</h2>
-
-<div class="materials">
-<a href="#">📄  Notes</a>
-<a href="#">📄 Lab Programs</a>
-<a href="#">📄 Important Questions</a>
-</div>
-
-</div>
-
-<div class="subject">
-<h2>Data Structure</h2>
-
-<div class="materials">
-<a href="#">📄 Notes</a>
-<a href="#">📄 Short Notes</a>
-<a href="#">📄 Model Questions</a>
-</div>
-
-</div>
-
-<div class="subject">
-<h2>Computer Organization & Architecture</h2>
-
-<div class="materials">
-<a href="#">📄 Notes</a>
-<a href="#">📄 Exam Preparation Notes</a>
-<a href="#">📄 Previous Questions</a>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 StudyHub | Free Study Materials</p>
-
-</footer>
-
-</body>
-
+    <footer class="mt-10 bg-blue-500/20 px-4 py-6 text-center">
+      <p class="text-sm text-slate-500">
+        © 2026 StudyHub | Free Study Materials
+      </p>
+    </footer>
+  </body>
 </html>
