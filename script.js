@@ -18,6 +18,7 @@ const mainPage = document.getElementById("main-page");
 const welcomeForm = document.getElementById("welcome-form");
 const nameInput = document.getElementById("name-input");
 const userGreeting = document.getElementById("user-greeting");
+const logoutButton = document.getElementById("logout-button");
 
 function showMainPage(name) {
   userGreeting.textContent = `Welcome, ${name} 👋`;
@@ -50,4 +51,12 @@ welcomeForm.addEventListener("submit", (event) => {
 
 nameInput.addEventListener("input", () => {
   nameInput.setCustomValidity("");
+});
+
+logoutButton.addEventListener("click", () => {
+    navMenu.classList.add("hidden");
+  localStorage.removeItem("studyHubName");
+  welcomeScreen.classList.remove("hidden");
+  mainPage.classList.add("hidden");
+  nameInput.value = "";
 });
