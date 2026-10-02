@@ -57,7 +57,13 @@
 
         <nav
           id="nav-menu"
-          class="hidden md:mr-5 md:bg-transparent md:flex md:flex-row md:static md:w-auto md:p-0 md:h-auto absolute bg-black w-1/2 h-full flex flex-col gap-4 px-5 py-4 text-sm font-medium text-slate-300"
+          class="hidden fixed top-0 left-0 z-50 h-dvh w-1/2
+           flex flex-col gap-4 overflow-y-auto
+           bg-black px-5 py-4 text-sm font-medium text-slate-300
+           md:static md:z-auto md:mr-5 md:flex md:flex-row
+           md:w-auto md:h-auto md:overflow-visible
+           md:bg-transparent md:p-0"
+  >
         >
           <a
             href="#"
