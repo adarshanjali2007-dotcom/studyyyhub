@@ -9,135 +9,184 @@
   </head>
 
   <body class="bg-black">
-    <header class="bg-blue-500 text-left p-4 relative">
-      <h1 class="text-3xl font-bold text-white">StudyHub</h1>
-      <p class="mt-1 text-sm text-slate-900">
-        Free Study Materials for Students
-      </p>
-      <button
-        id="menu-button"
-        class="absolute right-6 top-1 cursor-pointer text-3xl transition-duration-700  hover:border hover:border-slate-500 p-2 text-center"
+    <section
+      id="welcome-screen"
+      class="hidden min-h-screen flex items-center justify-center px-4"
+    >
+      <form
+        id="welcome-form"
+        class="w-full max-w-sm rounded-2xl bg-slate-900 p-6 text-white"
       >
-        ☰
-      </button>
-    </header>
+        <h1 class="text-2xl font-bold">Welcome to StudyHub</h1>
+        <p class="mt-2 text-slate-400">Enter your name to get started</p>
+        <label for="name-input" class="mt-6 block">Your name</label>
+        <input
+          id="name-input"
+          class="mt-2 w-full rounded-lg border border-slate-600 p-3"
+          type="text"
+          placeholder="Enter your name"
+          required
+          maxlength="50"
+        />
+        <button
+          class="mt-4 w-full rounded-lg bg-blue-500 p-3 font-semibold"
+          type="submit"
+        >
+          Continue
+        </button>
+      </form>
+    </section>
 
-    <nav
-      id="nav-menu"
-      class="hidden absolute bg-black w-1/2  h-full flex flex-col gap-4 px-5 py-4 text-sm font-medium text-slate-300"
-    >
-      <a href="#" class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200">Home</a>
-      <a href="#" class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200">Subjects</a>
-      <a href="#" class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200">Notes</a>
-      <a href="#" class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200">Contact</a>
-    </nav>
+    <section id="main-page" class="main-page hidden">
+      <header class="bg-blue-500 text-left p-4 relative">
+        <h1 class="text-3xl font-bold text-white">StudyHub</h1>
+        <p class="mt-1 text-sm text-slate-900">
+          Free Study Materials for Students
+        </p>
+        <p id="user-greeting" class="mt-2 font-medium text-white"></p>
+        <button
+          id="menu-button"
+          class="absolute right-6 top-1 cursor-pointer text-3xl transition-duration-700 hover:border hover:border-slate-500 p-2 text-center"
+        >
+          ☰
+        </button>
+      </header>
 
-    <!-- Subjects -cards -->
-    <div
-      class="mt-4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-1"
-    >
-      <!-- Mathematics -->
+      <nav
+        id="nav-menu"
+        class="hidden absolute bg-black w-1/2 h-full flex flex-col gap-4 px-5 py-4 text-sm font-medium text-slate-300"
+      >
+        <a
+          href="#"
+          class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200"
+          >Subjects</a
+        >
+        <a
+          href="#"
+          class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200"
+          >Notes</a
+        >
+        <a
+          href="#"
+          class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200"
+          >Contact</a
+        >
+      </nav>
+
+      <!-- Subjects -cards -->
       <div
-        class="border rounded-2xl border-slate-200 p-6 shadow-sm bg-slate-950"
+        class="mt-4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-1"
       >
-        <h2 class="mb-5 text-xl font-bold text-slate-800">Mathematics</h2>
-        <div class="flex flex-col gap-3">
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Notes</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Important Questions</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Previous Year Papers</a
-          >
+        <!-- Mathematics -->
+        <div
+          class="border rounded-2xl border-slate-200 p-6 shadow-sm bg-slate-950"
+        >
+          <h2 class="mb-5 text-xl font-bold text-slate-800">Mathematics</h2>
+          <div class="flex flex-col gap-3">
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Notes</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Important Questions</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Previous Year Papers</a
+            >
+          </div>
+        </div>
+
+        <!-- Programming in C -->
+
+        <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
+          <h2 class="mb-5 text-xl font-bold text-slate-800">
+            Programming in C
+          </h2>
+          <div class="flex flex-col gap-3">
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Notes</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Lab Programs</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Important Question
+            </a>
+          </div>
+        </div>
+
+        <!-- Digital Fundmentals -->
+
+        <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
+          <h2 class="mb-5 text-xl font-bold text-slate-800">
+            Digital Fundmentals
+          </h2>
+          <div class="flex flex-col gap-3">
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄Unit Notes</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Short Notes</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Model Questions
+            </a>
+          </div>
+        </div>
+
+        <!-- Computer Fundmentals -->
+
+        <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
+          <h2 class="mb-5 text-xl font-bold text-slate-800">
+            Computer Fundmentals
+          </h2>
+          <div class="flex flex-col gap-3">
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >Lecture Notes</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Exam Prepration Notes</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+              >📄 Previous Questions
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Programming in C -->
-
-      <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
-        <h2 class="mb-5 text-xl font-bold text-slate-800">Programming in C</h2>
-        <div class="flex flex-col gap-3">
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Notes</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Lab Programs</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Important Question
-          </a>
-        </div>
-      </div>
-
-      <!-- Digital Fundmentals -->
-
-      <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
-        <h2 class="mb-5 text-xl font-bold text-slate-800">
-          Digital Fundmentals
-        </h2>
-        <div class="flex flex-col gap-3">
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄Unit Notes</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Short Notes</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Model Questions
-          </a>
-        </div>
-      </div>
-
-      <!-- Computer Fundmentals -->
-
-      <div class="border rounded-2xl border-slate-200 p-6 bg-slate-950">
-        <h2 class="mb-5 text-xl font-bold text-slate-800">
-          Computer Fundmentals
-        </h2>
-        <div class="flex flex-col gap-3">
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >Lecture Notes</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Exam Prepration Notes</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 rounded-xl px-4 py-3 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
-            >📄 Previous Questions
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="mt-10 bg-blue-500/20 px-4 py-6 text-center">
-      <p class="text-sm text-slate-500">
-        © 2026 StudyHub | Free Study Materials
-      </p>
-    </footer>
+      <footer class="mt-10 bg-blue-500/20 px-4 py-6 text-center">
+        <p class="text-sm text-slate-500">
+          © 2026 StudyHub | Free Study Materials
+        </p>
+      </footer>
+    </section>
   </body>
 </html>
