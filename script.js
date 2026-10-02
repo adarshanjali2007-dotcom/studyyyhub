@@ -11,3 +11,43 @@ navLinks.forEach(link=>{
         navMenu.classList.add("hidden");
     });
 });
+
+
+const welcomeScreen = document.getElementById("welcome-screen");
+const mainPage = document.getElementById("main-page");
+const welcomeForm = document.getElementById("welcome-form");
+const nameInput = document.getElementById("name-input");
+const userGreeting = document.getElementById("user-greeting");
+
+function showMainPage(name) {
+  userGreeting.textContent = `Welcome, ${name} 👋`;
+  welcomeScreen.classList.add("hidden");
+  mainPage.classList.remove("hidden");
+}
+
+const savedName = localStorage.getItem("studyHubName");
+
+if (savedName && savedName.trim()) {
+  showMainPage(savedName);
+} else {
+  welcomeScreen.classList.remove("hidden");
+}
+
+welcomeForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const name = nameInput.value.trim();
+
+  if (!name) {
+    nameInput.setCustomValidity("Please enter your name.");
+    nameInput.reportValidity();
+    return;
+  }
+
+  localStorage.setItem("studyHubName", name);
+  showMainPage(name);
+});
+
+nameInput.addEventListener("input", () => {
+  nameInput.setCustomValidity("");
+});
