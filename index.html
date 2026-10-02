@@ -38,46 +38,56 @@
     </section>
 
     <section id="main-page" class="main-page hidden">
-      <header class="bg-blue-500 text-left p-4 relative">
-        <h1 class="text-3xl font-bold text-white">StudyHub</h1>
-        <p class="mt-1 text-sm text-slate-900">
-          Free Study Materials for Students
-        </p>
-        <p id="user-greeting" class="mt-2 font-medium text-white"></p>
+      <header
+        class="bg-blue-500 text-left p-4 relative md:flex md:items-center md:justify-between"
+      >
+        <div>
+          <h1 class="text-3xl font-bold text-white">StudyHub</h1>
+          <p class="mt-1 text-sm text-slate-900">
+            Free Study Materials for Students
+          </p>
+          <p id="user-greeting" class="mt-2 font-medium text-white"></p>
+        </div>
         <button
           id="menu-button"
-          class="absolute right-6 top-1 cursor-pointer text-3xl transition-duration-700 hover:border hover:border-slate-500 p-2 text-center"
+          class="md:hidden absolute right-6 top-1 cursor-pointer text-3xl transition-duration-700 hover:border hover:border-slate-500 p-2 text-center"
         >
           ☰
         </button>
-      </header>
 
-      <nav
-        id="nav-menu"
-        class="hidden absolute bg-black w-1/2 h-full flex flex-col gap-4 px-5 py-4 text-sm font-medium text-slate-300"
-      >
-        <a
-          href="#"
-          class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200"
-          >Home</a
+        <nav
+          id="nav-menu"
+          class="hidden md:mr-5 md:bg-transparent md:flex md:flex-row md:static md:w-auto md:p-0 md:h-auto absolute bg-black w-1/2 h-full flex flex-col gap-4 px-5 py-4 text-sm font-medium text-slate-300"
         >
-        <a
-          href="#"
-          class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200"
-          >Subjects</a
-        >
-        <a
-          href="#"
-          class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200"
-          >Notes</a
-        >
-        <a
-          href="#"
-          class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-200"
-          >Contact</a
-        >
-        <button id="logout-button" type="button" class="px-6 py-2 rounded-2xl border border-slate-200 cursor-pointer hover:bg-slate-700">Logout</button>
-      </nav>
+          <a
+            href="#"
+            class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-700"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-700"
+            >Subjects</a
+          >
+          <a
+            href="#"
+            class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-700"
+            >Notes</a
+          >
+          <a
+            href="#"
+            class="hover:bg-slate-700 hover:text-white px-6 py-2 rounded-2xl border border-slate-700"
+            >Contact</a
+          >
+          <button
+            id="logout-button"
+            type="button"
+            class="px-6 py-2 rounded-2xl border border-slate-700 cursor-pointer hover:bg-slate-700"
+          >
+            Logout
+          </button>
+        </nav>
+      </header>
 
       <!-- Subjects -cards -->
       <div
